@@ -42,8 +42,9 @@ export default function TradeGateway() {
             <p className="text-xs font-black uppercase tracking-[0.4em] text-[#c9a227]">PETE Trade Gateway · Founding Beta</p>
             <h1 className="mt-6 text-5xl font-black uppercase leading-[0.95] md:text-8xl">Your trade. Your risk. <span className="text-[#c9a227]">Your broker.</span></h1>
             <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-400">Customer-directed trade execution and management through Telegram and MT4, engineered around validation, control, risk and traceability.</p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <a href="/how-it-works" className="rounded-full bg-[#c9a227] px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">See exactly how PETE works</a>
+              <a href="/download-pete-guide" target="_blank" rel="noreferrer" className="rounded-full border border-[#c9a227] px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-[#c9a227] transition hover:bg-[#c9a227] hover:text-black">Open full PETE guide PDF</a>
               <a href="#founding-beta" className="rounded-full border border-zinc-700 px-8 py-4 text-center text-sm font-bold uppercase tracking-widest hover:border-[#c9a227] hover:text-[#c9a227]">Founding Beta · £9.99/month</a>
             </div>
           </div>
@@ -81,8 +82,9 @@ export default function TradeGateway() {
               </article>
             ))}
           </div>
-          <div className="mt-10 text-center">
+          <div className="mt-10 flex flex-col justify-center gap-4 text-center sm:flex-row">
             <a href="/how-it-works" className="inline-block rounded-full border border-[#c9a227] px-8 py-4 text-sm font-black uppercase tracking-widest text-[#c9a227] transition hover:bg-[#c9a227] hover:text-black">Read the full PETE workings</a>
+            <a href="/download-pete-guide" target="_blank" rel="noreferrer" className="inline-block rounded-full border border-zinc-700 px-8 py-4 text-sm font-black uppercase tracking-widest text-zinc-300 transition hover:border-[#c9a227] hover:text-[#c9a227]">Open customer guide PDF</a>
           </div>
         </div>
       </section>
@@ -129,7 +131,7 @@ export default function TradeGateway() {
       <footer className="border-t border-zinc-900 px-6 py-10 text-sm text-zinc-500">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
           <div><p className="font-bold text-zinc-300">The Performance Engineer Ltd</p><p className="mt-2">Registered in England & Wales · Company No. 17437264</p><p className="mt-2">hello@theperformanceengineer.uk</p></div>
-          <div className="md:text-right"><p>© 2026 The Performance Engineer Ltd. All rights reserved.</p><p className="mt-2"><a href="/how-it-works" className="hover:text-[#c9a227]">How PETE works</a></p><p className="mt-2"><a href="/about" className="hover:text-[#c9a227]">About The Performance Engineer</a></p></div>
+          <div className="md:text-right"><p>© 2026 The Performance Engineer Ltd. All rights reserved.</p><p className="mt-2"><a href="/how-it-works" className="hover:text-[#c9a227]">How PETE works</a></p><p className="mt-2"><a href="/download-pete-guide" target="_blank" rel="noreferrer" className="hover:text-[#c9a227]">Customer guide PDF</a></p><p className="mt-2"><a href="/about" className="hover:text-[#c9a227]">About The Performance Engineer</a></p></div>
         </div>
       </footer>
     </main>
