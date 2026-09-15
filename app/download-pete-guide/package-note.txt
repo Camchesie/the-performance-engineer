@@ -1,0 +1,1 @@
+Public customer-facing PDF guide endpoint for PETE Trade Gateway Founding Beta.
