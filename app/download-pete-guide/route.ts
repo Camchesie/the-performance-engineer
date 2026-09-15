@@ -328,8 +328,8 @@ function buildGuidePdf() {
   const line = (x1: number, top1: number, x2: number, top2: number, width = 1, c = GOLD) => {
     commands.push(`${c[0]} ${c[1]} ${c[2]} RG ${width} w ${x1} ${(H - top1).toFixed(2)} m ${x2} ${(H - top2).toFixed(2)} l S`);
   };
-  const wrap = (value: string, size = 11, width = W - 2 * M) => {
-    const maxChars = Math.max(20, Math.floor(width / (size * 0.52)));
+  const wrap = (value: string, size = 11, width = W - 2 * M, factor = 0.52) => {
+    const maxChars = Math.max(20, Math.floor(width / (size * factor)));
     const words = value.split(/\s+/);
     const lines: string[] = [];
     let current = "";
@@ -372,10 +372,11 @@ function buildGuidePdf() {
     if (y + height > H - 62) startPage();
   };
   const heading = (number: string, title: string) => {
-    ensure(92);
+    const headingLines = wrap(title.toUpperCase(), 23, W - 2 * M, 0.66);
+    ensure(54 + headingLines.length * 30);
     text(number, M, y, 12, "F2", GOLD);
     y += 24;
-    for (const headingLine of wrap(title.toUpperCase(), 23)) {
+    for (const headingLine of headingLines) {
       text(headingLine, M, y, 23, "F2", BLACK);
       y += 30;
     }
