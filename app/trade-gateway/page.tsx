@@ -116,7 +116,7 @@ export default function TradeGateway() {
             <p className="mt-3 text-5xl font-black text-[#c9a227]">£9.99<span className="text-lg text-zinc-400"> / month</span></p>
             <p className="mt-4 text-sm leading-6 text-zinc-500">Intended to remain locked while the subscription remains continuously active.</p>
           </div>
-          <a href="mailto:hello@theperformanceengineer.uk?subject=PETE%20Trade%20Gateway%20Founding%20Beta&body=I%27d%20like%20to%20join%20the%20PETE%20Trade%20Gateway%20Founding%20Beta." className="mt-9 inline-block rounded-full bg-[#c9a227] px-9 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Join the Founding Beta</a>
+          <a href="/join-beta" className="mt-9 inline-block rounded-full bg-[#c9a227] px-9 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Join the Founding Beta</a>
           <p className="mt-5 text-xs text-zinc-600">Beta access is intentionally limited while real-world onboarding evidence is collected.</p>
         </div>
       </section>
