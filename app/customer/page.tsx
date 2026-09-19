@@ -101,7 +101,7 @@ export default function CustomerPortal() {
       setSummary(payload);
       setSignedOut(false);
     } catch {
-      setError("PETER Customer Portal is temporarily unavailable. Please try again shortly.");
+      setError("PETE Customer Portal is temporarily unavailable. Please try again shortly.");
     } finally {
       setLoading(false);
     }
