@@ -131,7 +131,7 @@ export default function TradeGateway() {
       <footer className="border-t border-zinc-900 px-6 py-10 text-sm text-zinc-500">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
           <div><p className="font-bold text-zinc-300">The Performance Engineer Ltd</p><p className="mt-2">Registered in England & Wales · Company No. 17437264</p><p className="mt-2">hello@theperformanceengineer.uk</p></div>
-          <div className="md:text-right"><p>© 2026 The Performance Engineer Ltd. All rights reserved.</p><p className="mt-2"><a href="/how-it-works" className="hover:text-[#c9a227]">How PETE works</a></p><p className="mt-2"><a href="/download-pete-guide" target="_blank" rel="noreferrer" className="hover:text-[#c9a227]">Customer guide PDF</a></p><p className="mt-2"><a href="/about" className="hover:text-[#c9a227]">About The Performance Engineer</a></p></div>
+          <div className="md:text-right"><p>© 2026 The Performance Engineer Ltd. All rights reserved.</p><p className="mt-2"><a href="/how-it-works" className="hover:text-[#c9a227]">How PETE works</a></p><p className="mt-2"><a href="/download-pete-guide" target="_blank" rel="noreferrer" className="hover:text-[#c9a227]">Customer guide PDF</a></p><p className="mt-2"><a href="/customer" className="hover:text-[#c9a227]">Customer Portal</a></p><p className="mt-2"><a href="/about" className="hover:text-[#c9a227]">About The Performance Engineer</a></p></div>
         </div>
       </footer>
     </main>
