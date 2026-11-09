@@ -135,7 +135,7 @@ export default function Home() {
           </div>
           <div className="md:text-right">
             <p>© 2026 The Performance Engineer Ltd. All rights reserved.</p>
-            <p className="mt-2 tracking-[0.2em] text-zinc-600">BUILT IN YORKSHIRE. ENGINEERED FOR PERFORMANCE.</p>
+            <p className="mt-2"><a href="/customer" className="hover:text-[#c9a227]">Customer Portal</a></p><p className="mt-2 tracking-[0.2em] text-zinc-600">BUILT IN YORKSHIRE. ENGINEERED FOR PERFORMANCE.</p>
           </div>
         </div>
       </footer>
