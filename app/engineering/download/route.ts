@@ -1,6 +1,7 @@
 import { createDecipheriv } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { get } from "@vercel/blob";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -9,25 +10,12 @@ const FILE_NAME = "PETE_Engineering_Toolkit_Release_1.zip";
 const AAD = Buffer.from("PETE-ENGINEERING-RELEASE-1");
 
 async function hasEntitlement(sessionId: string) {
-  const url = process.env.KV_REST_API_URL;
-  const token = process.env.KV_REST_API_TOKEN;
+  const result = await get(
+    `entitlements/engineering-r1/${sessionId}.json`,
+    { access: "private" },
+  );
 
-  if (!url || !token) throw new Error("KV_NOT_CONFIGURED");
-
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      authorization: `Bearer ${token}`,
-      "content-type": "application/json",
-    },
-    body: JSON.stringify(["GET", `pete:engineering:r1:${sessionId}`]),
-    cache: "no-store",
-  });
-
-  if (!response.ok) throw new Error("KV_LOOKUP_FAILED");
-
-  const payload = (await response.json()) as { result?: string | null };
-  return typeof payload.result === "string" && payload.result.length > 0;
+  return result?.statusCode === 200;
 }
 
 async function decryptToolkit() {
@@ -89,7 +77,20 @@ export async function GET(request: Request) {
         "x-content-type-options": "nosniff",
       },
     });
-  } catch {
+  } catch (error) {
+    const name = error instanceof Error ? error.name : "";
+
+    if (name === "BlobNotFoundError") {
+      return Response.json(
+        {
+          detail: "PAYMENT_NOT_VERIFIED",
+          message:
+            "Stripe confirmation is still processing, or this session does not own Release 1.",
+        },
+        { status: 403 },
+      );
+    }
+
     return Response.json({ detail: "DOWNLOAD_UNAVAILABLE" }, { status: 503 });
   }
 }

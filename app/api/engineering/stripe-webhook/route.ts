@@ -1,4 +1,5 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
+import { put } from "@vercel/blob";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -36,31 +37,6 @@ function verifyStripeSignature(payload: string, header: string, secret: string) 
   });
 }
 
-async function kvCommand(command: unknown[]) {
-  const url = process.env.KV_REST_API_URL;
-  const token = process.env.KV_REST_API_TOKEN;
-
-  if (!url || !token) {
-    throw new Error("KV_NOT_CONFIGURED");
-  }
-
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      authorization: `Bearer ${token}`,
-      "content-type": "application/json",
-    },
-    body: JSON.stringify(command),
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    throw new Error(`KV_ERROR_${response.status}`);
-  }
-
-  return response.json() as Promise<{ result?: unknown }>;
-}
-
 export async function POST(request: Request) {
   const secret = process.env.STRIPE_ENGINEERING_WEBHOOK_SECRET;
   const signature = request.headers.get("stripe-signature");
@@ -94,15 +70,23 @@ export async function POST(request: Request) {
       session.payment_status === "paid" &&
       session.metadata?.pete_product === PRODUCT_KEY
     ) {
-      const entitlementKey = `pete:engineering:r1:${session.id}`;
-      const value = JSON.stringify({
+      const entitlement = JSON.stringify({
         product: PRODUCT_KEY,
         session_id: session.id,
         email: session.customer_details?.email ?? session.customer_email ?? null,
         granted_at: new Date().toISOString(),
       });
 
-      await kvCommand(["SET", entitlementKey, value]);
+      await put(
+        `entitlements/engineering-r1/${session.id}.json`,
+        entitlement,
+        {
+          access: "private",
+          allowOverwrite: true,
+          contentType: "application/json",
+          cacheControlMaxAge: 60,
+        },
+      );
     }
   }
 
