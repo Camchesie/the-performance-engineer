@@ -33,7 +33,7 @@ const faqs = [
   ["Do I get future releases automatically?", "Not with the one-off Release 1 purchase. Future packs can be bought separately. A growing-library membership is planned for engineers who want every current and future tool while subscribed."],
   ["What formats are included?", "Release 1 contains editable Word templates, intelligent Excel workbooks and print-ready PDFs. The format is chosen around the job the tool needs to do."],
   ["Can I use the tools at work?", "Yes. The toolkit is intended for practical engineering use by the purchaser. Redistribution, resale or publishing the original files as your own product is not permitted."],
-  ["Is this the PETE Engineering app?", "Not yet. The Toolkit is the first commercial PETE Engineering product. The future app will turn these same engineering systems into guided digital workflows."],
+  ["Is this the PETE Engineering app?", "Not yet. The Toolkit is the first commercial PETE Engineering product. The future app will turn these same engineering systems into guided digital workflows."],\n  ["Do you offer engineering consultancy?", "Yes. The Performance Engineer can support businesses with engineering investigations, reliability, maintenance, OEE, root-cause analysis and operational improvement. Consultancy is scoped individually — enquire for a quote."],
 ];
 
 type PageProps = {
@@ -54,7 +54,7 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
           </a>
           <div className="flex items-center gap-4">
             <a href="#included" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">20 tools</a>
-            <a href="#faq" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] sm:block">FAQ</a>
+            <a href="#consultancy" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">Consultancy</a>\n            <a href="#faq" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] sm:block">FAQ</a>
             <a href="/engineering/buy" className="rounded-full bg-[#c9a227] px-5 py-3 text-xs font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Buy Release 1</a>
           </div>
         </div>
@@ -153,6 +153,56 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
               Buy Release 1
             </a>
           </aside>
+        </div>
+      </section>
+
+
+      <section id="consultancy" className="border-y border-zinc-900 bg-[#080808] px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="rounded-[2rem] border border-zinc-800 bg-[#0d0d0d] p-8 md:p-12">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#c9a227]">Engineering Consultancy</p>
+              <h2 className="mt-5 text-4xl font-black uppercase md:text-6xl">Need more than a template?</h2>
+              <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-400">
+                The Performance Engineer also supports businesses directly with practical engineering, reliability and operational-improvement consultancy.
+              </p>
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                {[
+                  "Breakdown and repeat-failure investigation",
+                  "Root-cause analysis and corrective-action support",
+                  "Maintenance strategy and PM effectiveness reviews",
+                  "OEE, downtime and reliability improvement",
+                  "Engineering KPI and management systems",
+                  "Asset criticality and bad-actor reviews",
+                  "Engineering process and workflow improvement",
+                  "Custom engineering documentation and toolkits",
+                ].map((item) => (
+                  <div key={item} className="rounded-2xl border border-zinc-800 bg-black/30 px-5 py-4 text-sm font-bold leading-6 text-zinc-300">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <aside className="flex flex-col justify-between rounded-[2rem] border border-[#c9a227]/40 bg-[#12100a] p-8 md:p-10">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.3em] text-[#c9a227]">Project support</p>
+                <h3 className="mt-5 text-3xl font-black uppercase">Engineering consultation</h3>
+                <p className="mt-5 leading-7 text-zinc-400">
+                  Every problem is different, so consultancy is quoted around the scope, site, data and level of support required.
+                </p>
+                <p className="mt-5 text-sm leading-6 text-zinc-500">
+                  Initial enquiries are reviewed before any work is agreed. No obligation and no fixed package forced onto the problem.
+                </p>
+              </div>
+              <a
+                href="mailto:hello@theperformanceengineer.uk?subject=Engineering%20Consultancy%20Enquiry&body=Hi%20The%20Performance%20Engineer%2C%0A%0AI%27d%20like%20to%20enquire%20about%20engineering%20consultancy.%0A%0ACompany%3A%0ASite%2Flocation%3A%0AProblem%20or%20project%3A%0AWhat%20support%20are%20you%20looking%20for%3F%3A%0A%0AThanks%2C"
+                className="mt-8 block rounded-full bg-[#c9a227] px-7 py-4 text-center text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]"
+              >
+                Enquire for a quote
+              </a>
+            </aside>
+          </div>
         </div>
       </section>
 
