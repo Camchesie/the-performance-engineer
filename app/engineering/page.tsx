@@ -80,12 +80,6 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
               <span className="rounded-full border border-zinc-800 bg-[#0d0d0d] px-4 py-3">Release 1 owned for life</span>
             </div>
 
-            {checkoutUnavailable && (
-              <div className="mt-8 max-w-3xl rounded-2xl border border-amber-500/30 bg-amber-500/10 px-5 py-4 text-sm leading-6 text-amber-100">
-                Checkout is not live yet. The Toolkit is ready; the Engineering Stripe product is being connected before public release.
-              </div>
-            )}
-
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <a href="/engineering/buy" className="rounded-full bg-[#c9a227] px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-black transition hover:bg-[#e4c45a]">
                 Buy Release 1 — £29.99
