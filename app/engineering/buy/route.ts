@@ -1,15 +1,8 @@
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const CHECKOUT_URL = process.env.PETE_ENGINEERING_RELEASE1_CHECKOUT_URL;
+const CHECKOUT_URL = "https://buy.stripe.com/6oU14p1U8bCe3e10ZOgbm00";
 
-export async function GET(request: Request) {
-  if (!CHECKOUT_URL || !CHECKOUT_URL.startsWith("https://")) {
-    return Response.redirect(
-      new URL("/engineering?checkout=unavailable", request.url),
-      303,
-    );
-  }
-
+export async function GET() {
   return Response.redirect(CHECKOUT_URL, 303);
 }
