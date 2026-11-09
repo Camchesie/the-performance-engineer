@@ -33,7 +33,8 @@ const faqs = [
   ["Do I get future releases automatically?", "Not with the one-off Release 1 purchase. Future packs can be bought separately. A growing-library membership is planned for engineers who want every current and future tool while subscribed."],
   ["What formats are included?", "Release 1 contains editable Word templates, intelligent Excel workbooks and print-ready PDFs. The format is chosen around the job the tool needs to do."],
   ["Can I use the tools at work?", "Yes. The toolkit is intended for practical engineering use by the purchaser. Redistribution, resale or publishing the original files as your own product is not permitted."],
-  ["Is this the PETE Engineering app?", "Not yet. The Toolkit is the first commercial PETE Engineering product. The future app will turn these same engineering systems into guided digital workflows."],\n  ["Do you offer engineering consultancy?", "Yes. The Performance Engineer can support businesses with engineering investigations, reliability, maintenance, OEE, root-cause analysis and operational improvement. Consultancy is scoped individually — enquire for a quote."],
+  ["Is this the PETE Engineering app?", "Not yet. The Toolkit is the first commercial PETE Engineering product. The future app will turn these same engineering systems into guided digital workflows."],
+  ["Do you offer engineering consultancy?", "Yes. The Performance Engineer can support businesses with engineering investigations, reliability, maintenance, OEE, root-cause analysis and operational improvement. Consultancy is scoped individually — enquire for a quote."],
 ];
 
 type PageProps = {
