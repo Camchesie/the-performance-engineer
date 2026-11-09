@@ -1,7 +1,7 @@
 const systems = [
   {
     title: "PETE Trade Gateway",
-    status: "Founding Beta coming soon",
+    status: "Founding Beta live",
     href: "/trade-gateway",
     text: "Customer-directed trade execution and management through Telegram and MetaTrader, engineered around control, risk and traceability.",
   },
@@ -18,10 +18,10 @@ const systems = [
     text: "Performance intelligence for athletes, built around measurable output, training data and continuous improvement.",
   },
   {
-    title: "Engineering & Consultancy",
-    status: "The Performance Engineer Ltd",
-    href: "mailto:hello@theperformanceengineer.uk",
-    text: "Engineering, reliability, asset systems and management consultancy focused on operational performance and practical improvement.",
+    title: "PETE Engineering",
+    status: "Toolkit Release 1",
+    href: "/engineering",
+    text: "Engineering toolkits, fault-finding systems, reliability support and consultancy focused on practical operational improvement.",
   },
 ];
 
@@ -90,14 +90,14 @@ export default function Home() {
 
       <section className="px-6 py-24">
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-[#c9a227]/30 bg-[#0d0d0d] p-8 text-center glow md:p-14">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-[#c9a227]">Coming soon</p>
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-[#c9a227]">Founding Beta live</p>
           <h2 className="mt-5 text-4xl font-black uppercase md:text-6xl">PETE Trade Gateway</h2>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
             Message your trade. PETE handles the controlled execution and management through your connected MetaTrader broker account.
           </p>
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="/trade-gateway" className="rounded-full bg-[#c9a227] px-8 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">See what&apos;s coming</a>
-            <a href="mailto:hello@theperformanceengineer.uk?subject=PETE%20Trade%20Gateway%20Founding%20Beta" className="rounded-full border border-zinc-700 px-8 py-4 text-sm font-bold uppercase tracking-widest hover:border-[#c9a227] hover:text-[#c9a227]">Register interest</a>
+            <a href="/trade-gateway" className="rounded-full bg-[#c9a227] px-8 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Explore Trade Gateway</a>
+            <a href="/join-beta" className="rounded-full border border-zinc-700 px-8 py-4 text-sm font-bold uppercase tracking-widest hover:border-[#c9a227] hover:text-[#c9a227]">Join Founding Beta</a>
           </div>
         </div>
       </section>

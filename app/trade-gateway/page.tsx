@@ -39,7 +39,7 @@ export default function TradeGateway() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(201,162,39,0.16),transparent_32rem)]" />
         <div className="relative mx-auto max-w-7xl">
           <div className="max-w-5xl">
-            <p className="text-xs font-black uppercase tracking-[0.4em] text-[#c9a227]">PETE Trade Gateway · Founding Beta</p>
+            <p className="text-xs font-black uppercase tracking-[0.4em] text-[#c9a227]">PETE Trade Gateway · Founding Beta live</p>
             <h1 className="mt-6 text-5xl font-black uppercase leading-[0.95] md:text-8xl">Your trade. Your risk. <span className="text-[#c9a227]">Your broker.</span></h1>
             <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-400">Customer-directed trade execution and management through Telegram and MT4, engineered around validation, control, risk and traceability.</p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
@@ -110,7 +110,7 @@ export default function TradeGateway() {
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-[#c9a227]/40 bg-[#0d0d0d] p-8 text-center glow md:p-14">
           <p className="text-xs font-black uppercase tracking-[0.35em] text-[#c9a227]">Founding Beta</p>
           <h2 className="mt-5 text-4xl font-black uppercase md:text-6xl">A deliberately small first group.</h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-400">The Founding Beta is initially targeting approximately 5–10 MT4 traders so onboarding, broker differences and real Windows/VPS environments can be observed properly before wider release.</p>
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-400">Founding Beta is live and intentionally limited to approximately 5–10 MT4 traders so onboarding, broker differences and real Windows/VPS environments can be observed properly before wider release.</p>
           <div className="mx-auto mt-9 max-w-xl rounded-3xl border border-zinc-800 bg-black p-7">
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-zinc-500">Founding Beta price</p>
             <p className="mt-3 text-5xl font-black text-[#c9a227]">£9.99<span className="text-lg text-zinc-400"> / month</span></p>
