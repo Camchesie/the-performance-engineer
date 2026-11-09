@@ -40,8 +40,8 @@ export default function TradeGateway() {
           </a>
           <div className="flex items-center gap-4">
             <a href="#faq" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">FAQ</a>
-            <a href="#founding-beta" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] sm:block">Founding Beta</a>
-            <a href="mailto:hello@theperformanceengineer.uk?subject=PETE%20Trade%20Gateway%20Founding%20Beta" className="rounded-full bg-[#c9a227] px-5 py-3 text-xs font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Register interest</a>
+            <a href="#join" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] sm:block">Join</a>
+            <a href="/join-beta" className="rounded-full bg-[#c9a227] px-5 py-3 text-xs font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Join PETE</a>
           </div>
         </div>
       </header>
@@ -50,7 +50,7 @@ export default function TradeGateway() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(201,162,39,0.16),transparent_32rem)]" />
         <div className="relative mx-auto max-w-7xl">
           <div className="max-w-5xl">
-            <p className="text-xs font-black uppercase tracking-[0.4em] text-[#c9a227]">PETE Trade Gateway · Founding Beta coming soon</p>
+            <p className="text-xs font-black uppercase tracking-[0.4em] text-[#c9a227]">PETE Trade Gateway · Founding Beta live</p>
             <h1 className="mt-6 text-5xl font-black uppercase leading-[0.95] md:text-8xl">Your trade. Your risk. <span className="text-[#c9a227]">Your broker.</span></h1>
             <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-400">
               Customer-directed trade execution and management through Telegram and MetaTrader, engineered around control, risk and traceability.
@@ -74,7 +74,7 @@ export default function TradeGateway() {
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#c9a227]">The idea</p>
               <h2 className="mt-5 text-4xl font-black uppercase md:text-6xl">Message the trade. PETE handles the execution layer.</h2>
               <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-400">
-                PETE Trade Gateway is being built for traders who already have their own trade idea or signal and want a faster, controlled way to get it onto their broker account and manage it remotely.
+                PETE Trade Gateway is live in Founding Beta for traders who already have their own trade idea or signal and want a faster, controlled way to get it onto their broker account and manage it remotely.
               </p>
             </div>
             <div className="rounded-3xl border border-[#c9a227]/40 bg-[#12100a] p-8">
@@ -135,12 +135,12 @@ export default function TradeGateway() {
         </div>
       </section>
 
-      <section id="founding-beta" className="border-y border-zinc-900 bg-[#080808] px-6 py-24">
+      <section id="join" className="border-y border-zinc-900 bg-[#080808] px-6 py-24">
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-[#c9a227]/40 bg-[#0d0d0d] p-8 text-center glow md:p-14">
           <p className="text-xs font-black uppercase tracking-[0.35em] text-[#c9a227]">Founding Beta</p>
           <h2 className="mt-5 text-4xl font-black uppercase md:text-6xl">10 founding places.</h2>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-            The first Founding Beta customers will help validate PETE across real brokers, MetaTrader installations and customer workflows before wider release.
+            Founding Beta is live. Join PETE, complete checkout, link Telegram and pair your MetaTrader installation through the customer onboarding flow.
           </p>
           <div className="mx-auto mt-9 max-w-xl rounded-3xl border border-zinc-800 bg-black p-7">
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-zinc-500">Founding Beta price</p>
@@ -148,10 +148,10 @@ export default function TradeGateway() {
             <p className="mt-4 text-sm leading-6 text-zinc-500">Locked while the subscription remains continuously active.</p>
             <p className="mt-3 text-sm font-bold leading-6 text-zinc-300">Standard pricing will be higher after beta.</p>
           </div>
-          <a href="mailto:hello@theperformanceengineer.uk?subject=PETE%20Trade%20Gateway%20Founding%20Beta&body=I%27d%20like%20to%20register%20my%20interest%20in%20PETE%20Trade%20Gateway%20Founding%20Beta." className="mt-9 inline-block rounded-full bg-[#c9a227] px-9 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">
-            Register interest
+          <a href="/join-beta" className="mt-9 inline-block rounded-full bg-[#c9a227] px-9 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">
+            Join Founding Beta
           </a>
-          <p className="mt-5 text-xs text-zinc-600">Founding Beta is not yet open for general onboarding.</p>
+          <p className="mt-5 text-xs text-zinc-600">Checkout and onboarding are live for Founding Beta customers.</p>
         </div>
       </section>
 
@@ -162,7 +162,7 @@ export default function TradeGateway() {
             PETE Trade Gateway is execution and trade-management software for customer-directed instructions. It does not provide investment advice, trading signals or guaranteed outcomes. Trading leveraged products can result in losses. Customers remain responsible for their trading decisions, broker account and instructions submitted to PETE.
           </p>
           <p className="mt-3 text-sm leading-7 text-zinc-600">
-            Product scope, platform support and Founding Beta terms may change during development and validation.
+            PETE Trade Gateway remains a Founding Beta product. Product scope, platform support and beta terms may continue to evolve as real-customer validation continues.
           </p>
         </div>
       </section>
