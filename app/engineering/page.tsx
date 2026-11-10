@@ -1,3 +1,27 @@
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "PETE Engineering Toolkit — Release 1",
+  description:
+    "20 practical engineering tools for fault finding, root-cause analysis, reliability, maintenance and performance improvement.",
+  sku: "PETE-ENG-R1",
+  brand: {
+    "@type": "Brand",
+    name: "The Performance Engineer",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://www.theperformanceengineer.uk/engineering",
+    priceCurrency: "GBP",
+    price: "29.99",
+    availability: "https://schema.org/InStock",
+    seller: {
+      "@type": "Organization",
+      name: "The Performance Engineer Ltd",
+    },
+  },
+};
+
 const tools = [
   ["5 Why Root Cause Analysis", "Editable investigation template + print-ready PDF"],
   ["Root Cause Investigation", "Evidence-led RCA with cause confidence and verification"],
@@ -84,6 +108,10 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
 
   return (
     <main className="min-h-screen bg-[#050505] text-[#f5f5f5]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-black/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="/" className="flex items-center gap-3">
@@ -91,6 +119,7 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
             <span className="hidden text-xs font-bold uppercase tracking-[0.24em] text-zinc-300 sm:block">The Performance Engineer</span>
           </a>
           <div className="flex items-center gap-4">
+            <a href="/engineering/support" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Support</a>
             <a href="#problems" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Problems</a>
             <a href="#workflow" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Workflow</a>
             <a href="#free-starter" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Free pack</a>
@@ -478,6 +507,7 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
           </div>
           <div className="md:text-right">
             <p>© 2026 The Performance Engineer Ltd. All rights reserved.</p>
+            <p className="mt-2"><a href="/engineering/support" className="hover:text-[#c9a227]">Engineering Support</a></p>
             <p className="mt-2"><a href="/" className="hover:text-[#c9a227]">The PETE ecosystem</a></p>
             <p className="mt-2 tracking-[0.2em] text-zinc-600">MEASURE. ANALYSE. IMPROVE.</p>
           </div>
