@@ -11,9 +11,6 @@ export const metadata: Metadata = {
   },
   description:
     "Practical engineering support, reliability tools, root-cause analysis resources and PETE performance systems from The Performance Engineer Ltd.",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     url: siteUrl,
