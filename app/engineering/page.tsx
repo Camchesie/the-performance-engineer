@@ -93,6 +93,7 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
           <div className="flex items-center gap-4">
             <a href="#problems" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Problems</a>
             <a href="#workflow" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Workflow</a>
+            <a href="#free-starter" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Free pack</a>
             <a href="#preview" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">Preview</a>
             <a href="#case-study" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Example</a>
             <a href="#included" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">20 tools</a>
@@ -203,6 +204,64 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
                 <p className="mt-4 leading-7 text-zinc-400">{text}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="free-starter" className="border-y border-zinc-900 bg-[#080808] px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="rounded-[2rem] border border-zinc-800 bg-[#0d0d0d] p-8 md:p-12">
+              <p className="text-xs font-black uppercase tracking-[0.3em] text-[#c9a227]">Try PETE Engineering free</p>
+              <h2 className="mt-5 text-4xl font-black uppercase md:text-6xl">Start with one real problem.</h2>
+              <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-400">
+                The Free Engineering Starter Pack gives you three practical tools you can use today. No subscription and no deliberately useless demo sheets.
+              </p>
+
+              <div className="mt-9 grid gap-4 md:grid-cols-3">
+                {[
+                  ["Basic 5 Why", "A clean editable structure for working past the first obvious cause."],
+                  ["Fault Investigation", "Capture symptoms, evidence, containment and the next investigation steps."],
+                  ["Downtime + Pareto", "Log downtime and automatically rank the biggest failure categories."],
+                ].map(([title, text]) => (
+                  <article key={title} className="rounded-2xl border border-zinc-800 bg-black/30 p-5">
+                    <h3 className="font-black text-[#c9a227]">{title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-zinc-500">{text}</p>
+                  </article>
+                ))}
+              </div>
+
+              <p className="mt-7 text-sm leading-6 text-zinc-500">
+                Free gets you the starter tools. Release 1 adds the complete investigation, reliability, maintenance, corrective-action and KPI system.
+              </p>
+            </div>
+
+            <aside className="flex flex-col justify-between rounded-[2rem] border border-[#c9a227]/40 bg-[#12100a] p-8 md:p-10">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.3em] text-[#c9a227]">Free Starter Pack</p>
+                <p className="mt-5 text-5xl font-black text-zinc-100">£0</p>
+                <p className="mt-3 font-bold text-zinc-300">Three editable engineering tools.</p>
+                <ul className="mt-6 space-y-3 text-sm leading-6 text-zinc-400">
+                  <li>✓ Editable Word investigation templates</li>
+                  <li>✓ Intelligent Excel downtime/Pareto starter</li>
+                  <li>✓ Worked sample data included</li>
+                  <li>✓ Yours to keep</li>
+                </ul>
+              </div>
+
+              <div className="mt-9">
+                <a
+                  href="/downloads/PETE_Engineering_Free_Starter_Pack.zip"
+                  download
+                  className="block rounded-full bg-[#c9a227] px-7 py-4 text-center text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]"
+                >
+                  Download Free Starter Pack
+                </a>
+                <a href="/engineering/buy" className="mt-4 block text-center text-xs font-bold uppercase tracking-[0.18em] text-zinc-500 hover:text-[#c9a227]">
+                  Or get all 20 Release 1 tools →
+                </a>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
