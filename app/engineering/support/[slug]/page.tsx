@@ -297,7 +297,7 @@ const articles: Record<string, Article> = {
         ],
       },
     ],
-
+  },
   "fishbone-diagram-engineering-example": {
     slug: "fishbone-diagram-engineering-example",
     title: "Fishbone Diagram for Engineering Root Cause Analysis",
@@ -772,7 +772,6 @@ const articles: Record<string, Article> = {
       { href: "/engineering/support/downtime-pareto-analysis", title: "Downtime Pareto Analysis" },
       { href: "/engineering/support/repeat-machine-failures", title: "How to Stop Repeat Machine Failures" },
     ],
-  },
   },
 };
 
