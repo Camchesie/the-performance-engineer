@@ -21,10 +21,47 @@ const tools = [
   ["Engineering KPI Dashboard", "Track the measures that actually matter"],
 ];
 
+const problems = [
+  {
+    eyebrow: "Machine keeps failing",
+    title: "Stop fixing the symptom.",
+    text: "Capture what actually happened, narrow the problem, challenge likely causes and record the evidence before calling anything root cause.",
+    tools: ["Fault Investigation", "Root Cause Investigation", "5 Why", "Fishbone", "Repeat Failure Tracker"],
+  },
+  {
+    eyebrow: "Downtime keeps climbing",
+    title: "Find what is really costing you.",
+    text: "Turn downtime into usable evidence, rank the biggest losses and measure whether reliability and repair performance are actually improving.",
+    tools: ["Downtime Log", "Automatic Pareto", "OEE", "MTBF / MTTR"],
+  },
+  {
+    eyebrow: "Actions disappear",
+    title: "Make improvement stick.",
+    text: "Give every corrective action an owner, due date, status and effectiveness check instead of letting the same problem return three weeks later.",
+    tools: ["Corrective Action Tracker", "Engineering Action Tracker", "8D", "A3", "Weekly Review"],
+  },
+  {
+    eyebrow: "Engineering needs to prove value",
+    title: "Manage with evidence.",
+    text: "Prioritise the right assets, challenge PM effectiveness and put the engineering measures that matter in front of the people making decisions.",
+    tools: ["Asset Criticality", "PM Effectiveness", "Engineering KPI Dashboard", "Asset Information"],
+  },
+];
+
+const workflow = [
+  ["01", "Capture", "Record the fault, symptoms and evidence while it is still fresh.", "Fault Investigation"],
+  ["02", "Define", "Get precise about what the problem is — and what it is not.", "5W2H · Is / Is Not"],
+  ["03", "Analyse", "Use data and structured cause thinking instead of jumping to the first explanation.", "Pareto · Fishbone · 5 Why"],
+  ["04", "Confirm", "Separate suspected causes from evidence-supported root cause.", "Root Cause Investigation"],
+  ["05", "Act", "Assign containment, corrective and improvement actions with ownership.", "8D · A3 · Action Trackers"],
+  ["06", "Verify", "Check whether the action actually stopped the failure returning.", "Effectiveness checks · Repeat Failure"],
+  ["07", "Learn", "Retain the result and use the trend to improve maintenance and engineering priorities.", "Weekly Review · KPI · OEE · MTBF / MTTR"],
+];
+
 const benefits = [
-  ["Built for real engineering work", "No decorative paperwork. Every tool is designed to help define a problem, analyse evidence, control action or measure performance."],
-  ["Editable + printable", "Word, Excel and print-ready PDF formats are used where they make sense rather than forcing every tool into the same format."],
-  ["Consistent PETE system", "Shared black, charcoal and gold design, revision control, document identity and PETE watermarking throughout."],
+  ["Not just blank templates", "The Excel tools calculate, rank and summarise where appropriate. The investigation documents guide the thinking rather than leaving you staring at an empty box."],
+  ["Use the right format for the job", "Editable Word templates, intelligent Excel workbooks and print-ready PDFs are included where they make practical sense."],
+  ["One engineering language", "The same PETE structure runs through investigation, corrective action, reliability and management so the pack works as a system rather than twenty unrelated downloads."],
   ["Own Release 1 for life", "The £29.99 purchase is a one-off payment for permanent access to this specific release. Future major packs are separate."],
 ];
 
@@ -54,6 +91,8 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
             <span className="hidden text-xs font-bold uppercase tracking-[0.24em] text-zinc-300 sm:block">The Performance Engineer</span>
           </a>
           <div className="flex items-center gap-4">
+            <a href="#problems" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Problems</a>
+            <a href="#workflow" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Workflow</a>
             <a href="#included" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">20 tools</a>
             <a href="#consultancy" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">Consultancy</a>
             <a href="#faq" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] sm:block">FAQ</a>
@@ -94,6 +133,62 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
       </section>
 
       <div className="gold-line" />
+
+      <section id="problems" className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#c9a227]">Start with the problem</p>
+          <div className="mt-5 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <h2 className="max-w-4xl text-4xl font-black uppercase md:text-6xl">You do not need another template. You need the right tool when the problem hits.</h2>
+            <p className="max-w-md leading-7 text-zinc-500">Release 1 is organised around real engineering jobs: investigate the fault, understand the loss, control the action and prove the improvement.</p>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {problems.map((problem) => (
+              <article key={problem.eyebrow} className="rounded-[2rem] border border-zinc-800 bg-[#0d0d0d] p-8 transition hover:border-[#c9a227]/60">
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-[#c9a227]">{problem.eyebrow}</p>
+                <h3 className="mt-4 text-3xl font-black uppercase text-zinc-100">{problem.title}</h3>
+                <p className="mt-5 leading-7 text-zinc-400">{problem.text}</p>
+                <div className="mt-7 flex flex-wrap gap-2">
+                  {problem.tools.map((tool) => (
+                    <span key={tool} className="rounded-full border border-zinc-800 bg-black/40 px-3 py-2 text-xs font-bold text-zinc-400">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="workflow" className="border-y border-zinc-900 bg-[#080808] px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#c9a227]">The PETE investigation workflow</p>
+          <h2 className="mt-5 max-w-5xl text-4xl font-black uppercase md:text-6xl">From “it broke again” to a verified fix.</h2>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
+            The tools are designed to work together. Start with evidence, define the problem, analyse causes, confirm root cause, control the action and verify that the failure has actually gone away.
+          </p>
+
+          <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-7">
+            {workflow.map(([number, title, text, tool]) => (
+              <article key={number} className="rounded-3xl border border-zinc-800 bg-[#0d0d0d] p-6 xl:min-h-[20rem]">
+                <p className="text-sm font-black text-[#c9a227]">{number}</p>
+                <h3 className="mt-5 text-2xl font-black uppercase">{title}</h3>
+                <p className="mt-4 text-sm leading-6 text-zinc-500">{text}</p>
+                <p className="mt-6 border-t border-zinc-800 pt-4 text-xs font-bold leading-5 text-zinc-300">{tool}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 rounded-3xl border border-[#c9a227]/30 bg-[#12100a] p-7 md:flex md:items-center md:justify-between md:gap-8">
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#c9a227]">The rule</p>
+              <p className="mt-3 max-w-3xl text-lg font-bold leading-8 text-zinc-200">Do not call something root cause because it sounds believable. Build the evidence, confirm it, then verify the corrective action worked.</p>
+            </div>
+            <a href="/engineering/buy" className="mt-6 inline-block shrink-0 rounded-full bg-[#c9a227] px-7 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a] md:mt-0">Get Release 1</a>
+          </div>
+        </div>
+      </section>
 
       <section className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
