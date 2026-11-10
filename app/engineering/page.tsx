@@ -94,6 +94,7 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
             <a href="#problems" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Problems</a>
             <a href="#workflow" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Workflow</a>
             <a href="#preview" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">Preview</a>
+            <a href="#case-study" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Example</a>
             <a href="#included" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">20 tools</a>
             <a href="#consultancy" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">Consultancy</a>
             <a href="#faq" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] sm:block">FAQ</a>
@@ -241,6 +242,61 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
             </div>
             <a href="/engineering/buy" className="mt-6 inline-block shrink-0 rounded-full bg-[#c9a227] px-7 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a] md:mt-0">Buy Release 1 — £29.99</a>
           </div>
+        </div>
+      </section>
+
+      <section id="case-study" className="border-y border-zinc-900 bg-[#080808] px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#c9a227]">Worked engineering example</p>
+          <div className="mt-5 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <h2 className="text-4xl font-black uppercase md:text-6xl">A bearing fails again. PETE does not stop at “replace bearing”.</h2>
+              <p className="mt-7 text-lg leading-8 text-zinc-400">
+                This example shows how Release 1 turns a recurring breakdown into a structured investigation instead of another reactive repair.
+              </p>
+
+              <div className="mt-8 rounded-3xl border border-[#c9a227]/30 bg-[#12100a] p-7">
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-[#c9a227]">What the data says</p>
+                <p className="mt-4 text-5xl font-black text-zinc-100">101 min</p>
+                <p className="mt-2 text-sm font-bold uppercase tracking-[0.16em] text-zinc-400">Bearing-related downtime</p>
+                <p className="mt-5 text-3xl font-black text-[#c9a227]">49%</p>
+                <p className="mt-2 text-sm leading-6 text-zinc-500">of the example downtime — automatically exposed by the Pareto rather than guessed from memory.</p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                ["01 · Capture", "Three bearing-related stoppages are logged against Conveyor 01. Heat and noise are noted at the motor-side bearing.", "Downtime Log · Fault Investigation"],
+                ["02 · Define", "The problem is narrowed to one conveyor, one bearing position and a repeat pattern after previous replacement/lubrication.", "5W2H · Is / Is Not"],
+                ["03 · Prioritise", "The Pareto ranks bearing failures first: 101 minutes from 206 minutes of recorded downtime.", "Automatic Pareto"],
+                ["04 · Analyse", "Possible causes include lubrication, contamination, bearing fit, shaft condition and misalignment. Evidence is gathered rather than selecting the easiest answer.", "Fishbone · 5 Why"],
+                ["05 · Confirm", "Measurement shows coupling misalignment outside the site standard and matching wear on the failed bearing. The cause moves from suspected to supported.", "Root Cause Investigation"],
+                ["06 · Correct", "Alignment is corrected, the installation method is standardised and the PM gains an alignment/condition check with an owner and due date.", "Corrective Action · PM Effectiveness"],
+                ["07 · Verify", "The asset is monitored through the agreed verification period. No repeat bearing failure means the action can be closed with evidence.", "Repeat Failure · Weekly Review"],
+              ].map(([step, text, tool]) => (
+                <article key={step} className="rounded-3xl border border-zinc-800 bg-[#0d0d0d] p-6 md:p-7">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <h3 className="text-lg font-black uppercase text-[#c9a227]">{step}</h3>
+                    <span className="text-xs font-bold text-zinc-600">{tool}</span>
+                  </div>
+                  <p className="mt-4 leading-7 text-zinc-300">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-3xl border border-zinc-800 bg-[#0d0d0d] p-7 md:flex md:items-center md:justify-between md:gap-10">
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#c9a227]">The difference</p>
+              <p className="mt-3 max-w-4xl text-xl font-black leading-8 text-zinc-100">
+                “Bearing failed” is a repair record. A confirmed failure mechanism, corrective action and effectiveness check is engineering learning.
+              </p>
+            </div>
+            <a href="/engineering/buy" className="mt-6 inline-block shrink-0 rounded-full bg-[#c9a227] px-7 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a] md:mt-0">
+              Get the full toolkit
+            </a>
+          </div>
+          <p className="mt-4 text-xs leading-5 text-zinc-600">Illustrative worked example using sample engineering data. It is not a claim about a specific real-world failure.</p>
         </div>
       </section>
 
