@@ -5,6 +5,9 @@ const productSchema = {
   description:
     "20 practical engineering tools for fault finding, root-cause analysis, reliability, maintenance and performance improvement.",
   sku: "PETE-ENG-R1",
+  image: [
+    "https://www.theperformanceengineer.uk/pte-logo.png",
+  ],
   brand: {
     "@type": "Brand",
     name: "The Performance Engineer",
