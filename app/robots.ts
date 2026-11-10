@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [
         "/api/",
-        "/customer/",
+        "/customer",
         "/engineering/download",
         "/engineering/success",
         "/engineering/buy",
