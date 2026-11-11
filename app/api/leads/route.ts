@@ -95,5 +95,17 @@ export async function POST(request: Request) {
     },
   );
 
+  console.info(
+    "PETE_LEAD_CREATED",
+    JSON.stringify({
+      id,
+      lead_type: leadType,
+      name,
+      email,
+      company,
+      created_at: now.toISOString(),
+    }),
+  );
+
   return Response.redirect(destination, 303);
 }
