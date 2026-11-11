@@ -84,6 +84,18 @@ export default function ManagementSupportPage() {
         </div>
       </section>
 
+      <section className="px-6 pt-20">
+        <div className="mx-auto max-w-5xl rounded-[2rem] border border-[#c9a227]/35 bg-[#12100a] p-8 md:p-10">
+          <p className="text-xs font-black uppercase tracking-[0.3em] text-[#c9a227]">Free starter resources</p>
+          <h2 className="mt-4 text-3xl font-black uppercase">Take something useful away today.</h2>
+          <p className="mt-5 leading-8 text-zinc-400">Use the Management Performance pack for weekly reviews and action control, or the Digital Asset Management pack to start structuring assets and technical information.</p>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="/management-data/starter-pack" className="rounded-full bg-[#c9a227] px-7 py-4 text-center text-sm font-black uppercase tracking-widest text-black">Free management pack</a>
+            <a href="/management-data/digital-asset-starter-pack" className="rounded-full border border-[#c9a227] px-7 py-4 text-center text-sm font-black uppercase tracking-widest text-[#c9a227]">Free DAM pack</a>
+          </div>
+        </div>
+      </section>
+
       <section className="px-6 py-20">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
           <div className="rounded-[2rem] border border-zinc-800 bg-[#0d0d0d] p-8">
@@ -96,7 +108,7 @@ export default function ManagementSupportPage() {
             <p className="text-xs font-black uppercase tracking-[0.3em] text-[#c9a227]">Need implementation support?</p>
             <h2 className="mt-4 text-3xl font-black uppercase">Consultancy</h2>
             <p className="mt-5 leading-8 text-zinc-400">Use the guides yourself, or bring us in when the organisation needs a wider management, engineering or digital-system change.</p>
-            <a href="/consultancy" className="mt-7 inline-block text-xs font-black uppercase tracking-[0.2em] text-[#c9a227]">Explore consultancy →</a>
+            <a href="/consultancy/enquire" className="mt-7 inline-block text-xs font-black uppercase tracking-[0.2em] text-[#c9a227]">Explore consultancy →</a>
           </div>
         </div>
       </section>
