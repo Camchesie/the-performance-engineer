@@ -6,6 +6,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     ["", 1, "weekly"],
     ["/engineering", 1, "weekly"],
+    ["/management-data", 1, "weekly"],
+    ["/management-data/support", 0.9, "weekly"],
+    ["/management-data/support/digital-asset-management-guide", 0.9, "monthly"],
+    ["/management-data/support/management-information-from-data-to-decisions", 0.9, "monthly"],
+    ["/management-data/support/weekly-management-review", 0.9, "monthly"],
+    ["/management-data/support/action-management-accountability", 0.9, "monthly"],
+    ["/management-data/support/tiered-management-sqcdp", 0.9, "monthly"],
+    ["/management-data/support/capacity-resource-planning", 0.9, "monthly"],
+    ["/consultancy", 0.9, "monthly"],
     ["/engineering/support", 0.9, "weekly"],
     ["/engineering/support/5-why-template", 0.9, "monthly"],
     ["/engineering/support/oee-calculator-guide", 0.9, "monthly"],
@@ -27,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map(([path, priority, changeFrequency]) => ({
     url: `${base}${path}`,
-    lastModified: new Date("2026-11-10"),
+    lastModified: new Date("2026-11-11"),
     changeFrequency,
     priority,
   }));

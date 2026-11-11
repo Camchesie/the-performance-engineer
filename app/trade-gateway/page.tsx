@@ -28,8 +28,10 @@ export default function TradeGateway() {
             <span className="hidden text-xs font-bold uppercase tracking-[0.24em] text-zinc-300 sm:block">The Performance Engineer</span>
           </a>
           <div className="flex items-center gap-4">
+            <a href="/engineering" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] xl:block">Engineering</a>
+            <a href="/management-data" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] xl:block">Management & Data</a>
+            <a href="/consultancy" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Consultancy</a>
             <a href="/how-it-works" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">How PETE works</a>
-            <a href="#faq" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] sm:block">FAQ</a>
             <a href="#founding-beta" className="rounded-full bg-[#c9a227] px-5 py-3 text-xs font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Founding Beta</a>
           </div>
         </div>
