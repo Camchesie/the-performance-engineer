@@ -1,0 +1,4 @@
+Review Date,Area,KPI / Measure,Target / Expected,Actual / Current,Status,Exception / Key Comment,Owner,Action / Decision,Due Date,Support / Escalation Needed,Verified Closed
+2026-11-13,Operations,On-time delivery,>=95%,92%,Red,Three late orders linked to supplier delay,Operations Manager,Confirm recovery plan and customer priorities,2026-11-16,Director approval for premium freight,No
+2026-11-13,Engineering,Unplanned downtime minutes,<=180,245,Red,Conveyor 4 repeat bearing failures,Engineering Manager,Complete evidence-led RCA and containment review,2026-11-18,None,No
+2026-11-13,People,Absence,<=3%,2.1%,Green,Within expected range,HR / Area Manager,None,,None,Yes
