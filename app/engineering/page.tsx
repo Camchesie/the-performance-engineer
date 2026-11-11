@@ -277,7 +277,7 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
 
               <div className="mt-9">
                 <a
-                  href="/downloads/PETE_Engineering_Free_Starter_Pack.zip"
+                  href="/free-engineering-pack"
                   download
                   className="block rounded-full bg-[#c9a227] px-7 py-4 text-center text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]"
                 >
@@ -467,7 +467,7 @@ export default async function EngineeringPage({ searchParams }: PageProps) {
                 </p>
               </div>
               <a
-                href="mailto:hello@theperformanceengineer.uk?subject=Engineering%20Consultancy%20Enquiry&body=Hi%20The%20Performance%20Engineer%2C%0A%0AI%27d%20like%20to%20enquire%20about%20engineering%20consultancy.%0A%0ACompany%3A%0ASite%2Flocation%3A%0AProblem%20or%20project%3A%0AWhat%20support%20are%20you%20looking%20for%3F%3A%0A%0AThanks%2C"
+                href="/consultancy/enquire"
                 className="mt-8 block rounded-full bg-[#c9a227] px-7 py-4 text-center text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]"
               >
                 Enquire for a quote
