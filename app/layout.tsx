@@ -6,18 +6,18 @@ const siteUrl = "https://www.theperformanceengineer.uk";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "The Performance Engineer | PETE Engineering & Performance Systems",
+    default: "The Performance Engineer | Trade, Engineering, Management & Consultancy",
     template: "%s | The Performance Engineer",
   },
   description:
-    "Practical engineering support, reliability tools, root-cause analysis resources and PETE performance systems from The Performance Engineer Ltd.",
+    "Practical trading technology, engineering systems, management information, digital asset management and consultancy from The Performance Engineer Ltd.",
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "The Performance Engineer",
     title: "The Performance Engineer | PETE",
     description:
-      "Engineering support, reliability tools, root-cause analysis resources and performance systems built around Measure. Analyse. Improve.",
+      "Trade, engineering, management, data and consultancy built around one philosophy: Measure. Analyse. Improve.",
     images: [
       {
         url: "/pte-logo.png",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Performance Engineer | PETE",
     description:
-      "Engineering support, reliability tools, root-cause analysis resources and performance systems.",
+      "Trade, engineering, management, data and consultancy from The Performance Engineer.",
     images: ["/pte-logo.png"],
   },
 };
