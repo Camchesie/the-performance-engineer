@@ -1,0 +1,7 @@
+Control Area,Readiness Question,Current Status,Evidence / Current Location,Owner,Priority,Action,Due Date
+Asset Hierarchy,Do all maintainable assets have a unique asset ID?,Not Assessed,,Engineering Manager,High,Define asset hierarchy and naming standard,
+Document Control,Can users reliably identify the current approved revision?,Not Assessed,,Engineering Manager,High,Create revision and approval rules,
+Ownership,Is one role accountable for each asset record and controlled document?,Not Assessed,,Operations / Engineering,Medium,Assign ownership model,
+Access,Can technicians reach trusted drawings and manuals where the work happens?,Not Assessed,,Engineering Manager,Medium,Assess mobile / QR access,
+Lifecycle,Are modifications and obsolete documents retained with traceable history?,Not Assessed,,Engineering Manager,High,Define change and supersession workflow,
+Data Quality,Are mandatory asset fields defined and measured for completeness?,Not Assessed,,Data / Engineering,Medium,Define minimum data standard,
