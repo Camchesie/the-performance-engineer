@@ -78,7 +78,7 @@ export default function Home() {
             <a className="transition hover:text-[#c9a227]" href="/about">About</a>
           </nav>
           <a
-            href="mailto:hello@theperformanceengineer.uk"
+            href="/consultancy/enquire"
             className="rounded-full border border-[#c9a227]/70 px-4 py-2.5 text-[11px] font-black uppercase tracking-widest text-[#c9a227] transition hover:bg-[#c9a227] hover:text-black"
           >
             Talk to us
@@ -228,7 +228,7 @@ export default function Home() {
           </p>
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <a href="/consultancy" className="rounded-full bg-[#c9a227] px-8 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Explore consultancy</a>
-            <a href="mailto:hello@theperformanceengineer.uk?subject=Performance%20consultancy%20enquiry" className="rounded-full border border-zinc-700 px-8 py-4 text-sm font-bold uppercase tracking-widest hover:border-[#c9a227] hover:text-[#c9a227]">Start a conversation</a>
+            <a href="/consultancy/enquire" className="rounded-full border border-zinc-700 px-8 py-4 text-sm font-bold uppercase tracking-widest hover:border-[#c9a227] hover:text-[#c9a227]">Start a conversation</a>
           </div>
         </div>
       </section>
