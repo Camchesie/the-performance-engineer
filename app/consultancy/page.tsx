@@ -62,7 +62,7 @@ export default function ConsultancyPage() {
           <div className="flex items-center gap-4">
             <a href="/engineering" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] lg:block">Engineering</a>
             <a href="/management-data" className="hidden text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 hover:text-[#c9a227] md:block">Management & Data</a>
-            <a href="mailto:hello@theperformanceengineer.uk?subject=Consultancy%20enquiry" className="rounded-full bg-[#c9a227] px-5 py-3 text-xs font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Enquire</a>
+            <a href="/consultancy/enquire" className="rounded-full bg-[#c9a227] px-5 py-3 text-xs font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Enquire</a>
           </div>
         </div>
       </header>
@@ -78,7 +78,7 @@ export default function ConsultancyPage() {
             Engineering, management and digital-systems consultancy for organisations that need a clearer problem definition, a better operating system or practical support getting an improvement over the line.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="mailto:hello@theperformanceengineer.uk?subject=Consultancy%20enquiry" className="rounded-full bg-[#c9a227] px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Start a conversation</a>
+            <a href="/consultancy/enquire" className="rounded-full bg-[#c9a227] px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Start a conversation</a>
             <a href="#services" className="rounded-full border border-zinc-700 px-8 py-4 text-center text-sm font-bold uppercase tracking-widest hover:border-[#c9a227] hover:text-[#c9a227]">See where we can help</a>
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function ConsultancyPage() {
             <p className="text-xs font-black uppercase tracking-[0.3em] text-[#c9a227]">Not sure where it fits?</p>
             <h2 className="mt-4 text-3xl font-black uppercase">Tell us the problem.</h2>
             <p className="mt-5 leading-8 text-zinc-400">You do not need to diagnose the consultancy category before contacting us. Describe what is not working and we can start there.</p>
-            <a href="mailto:hello@theperformanceengineer.uk?subject=Performance%20problem%20enquiry" className="mt-7 inline-block text-xs font-black uppercase tracking-[0.2em] text-[#c9a227]">hello@theperformanceengineer.uk →</a>
+            <a href="/consultancy/enquire" className="mt-7 inline-block text-xs font-black uppercase tracking-[0.2em] text-[#c9a227]">Tell us the problem →</a>
           </div>
         </div>
       </section>
@@ -154,7 +154,7 @@ export default function ConsultancyPage() {
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
             The aim is simple: leave the organisation with better control, better information and a system that keeps working after the consultancy engagement finishes.
           </p>
-          <a href="mailto:hello@theperformanceengineer.uk?subject=Consultancy%20enquiry" className="mt-9 inline-block rounded-full bg-[#c9a227] px-8 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Discuss a project</a>
+          <a href="/consultancy/enquire" className="mt-9 inline-block rounded-full bg-[#c9a227] px-8 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Discuss a project</a>
         </div>
       </section>
     </main>

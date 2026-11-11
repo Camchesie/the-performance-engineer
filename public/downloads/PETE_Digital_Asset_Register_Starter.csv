@@ -1,0 +1,3 @@
+Asset ID,Site,Area,Line / System,Parent Asset,Asset Name,Asset Type,Manufacturer,Model,Serial Number,Criticality,Asset Owner,Physical Location,Status,Commissioned Date,QR / Asset Link,Primary Document Location,Notes
+AST-0001,Main Site,Production,Line 1,,Line 1 Main Conveyor,Conveyor,Example OEM,CV-100,SN12345,A,Engineering Manager,Production Hall 1,Active,2024-03-01,,,Example row - replace with your own asset data
+AST-0002,Main Site,Production,Line 1,AST-0001,Drive Motor,M motor,Example Motor Co,MTR-7.5,SN98765,B,Engineering Manager,Drive End,Active,2024-03-01,,,Linked child asset example

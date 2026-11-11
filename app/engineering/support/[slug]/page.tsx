@@ -942,7 +942,7 @@ export default async function EngineeringSupportArticle({
               <h2 className="mt-4 text-3xl font-black uppercase">Use the method, not just the article.</h2>
               <p className="mt-5 leading-8 text-zinc-400">Download the free starter pack with a Basic 5 Why, Fault Investigation sheet and Downtime/Pareto workbook.</p>
               <a
-                href="/downloads/PETE_Engineering_Free_Starter_Pack.zip"
+                href="/free-engineering-pack"
                 className="mt-7 inline-block rounded-full bg-[#c9a227] px-7 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]"
               >
                 Download free starter pack
