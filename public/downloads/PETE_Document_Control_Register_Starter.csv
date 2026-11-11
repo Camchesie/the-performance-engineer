@@ -1,0 +1,3 @@
+Document ID,Asset ID,Document Type,Document Title,Revision,Status,Owner,Approved By,Approval Date,Next Review Date,Current File Location / URL,Supersedes,Retention / Archive Rule,Notes
+DOC-0001,AST-0001,Drawing,Line 1 Conveyor General Arrangement,C,Approved,Engineering Manager,Head of Engineering,2026-09-01,2027-09-01,,DOC-0001 Rev B,Retain superseded revisions,Example row
+DOC-0002,AST-0002,Manual,Drive Motor OEM Manual,1,Approved,Engineering Manager,Engineering Manager,2024-03-01,2027-03-01,,,Retain while asset active,
