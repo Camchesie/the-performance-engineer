@@ -29,6 +29,54 @@ const guides = [
     text: "How to turn a messy downtime log into a ranked list of engineering priorities instead of chasing the loudest fault.",
     tag: "Downtime",
   },
+  {
+    href: "/engineering/support/fishbone-diagram-engineering-example",
+    title: "Fishbone Diagram for Engineering RCA",
+    text: "How to structure multiple possible causes without mistaking a brainstorm for a confirmed root cause.",
+    tag: "Root Cause Analysis",
+  },
+  {
+    href: "/engineering/support/8d-report-template-guide",
+    title: "8D Report Template Guide",
+    text: "A practical D1–D8 route from team and containment through root cause, permanent action and recurrence prevention.",
+    tag: "Problem Solving",
+  },
+  {
+    href: "/engineering/support/asset-criticality-matrix",
+    title: "Asset Criticality Matrix",
+    text: "Rank equipment by consequence and importance so PM, spares and reliability effort go where they matter most.",
+    tag: "Reliability",
+  },
+  {
+    href: "/engineering/support/pm-effectiveness-review",
+    title: "PM Effectiveness Review",
+    text: "How to tell whether preventive maintenance is actually preventing or detecting the failure modes that matter.",
+    tag: "Maintenance",
+  },
+  {
+    href: "/engineering/support/corrective-action-tracker",
+    title: "Corrective Action Tracker",
+    text: "Build an action system around ownership, dates, completion evidence and effectiveness rather than overdue admin.",
+    tag: "Improvement",
+  },
+  {
+    href: "/engineering/support/engineering-kpi-dashboard",
+    title: "Engineering KPI Dashboard",
+    text: "Choose a focused set of reliability, work-control and operational KPIs that support engineering decisions.",
+    tag: "Engineering Management",
+  },
+  {
+    href: "/engineering/support/why-bearings-keep-failing",
+    title: "Why Bearings Keep Failing",
+    text: "A practical investigation guide covering lubrication, contamination, mounting, alignment, fit, load and electrical damage.",
+    tag: "Fault Finding",
+  },
+  {
+    href: "/engineering/support/conveyor-fault-finding-guide",
+    title: "Conveyor Fault Finding Guide",
+    text: "Troubleshoot tracking, slip, spillage, carryback, bearings, drives and sensors without just resetting the symptom.",
+    tag: "Fault Finding",
+  },
 ];
 
 export default function EngineeringSupportPage() {
