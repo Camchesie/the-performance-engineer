@@ -54,7 +54,8 @@ export default function ManagementDataPage() {
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a href="/management-data/support" className="rounded-full bg-[#c9a227] px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Explore management support</a>
-            <a href="/consultancy" className="rounded-full border border-zinc-700 px-8 py-4 text-center text-sm font-bold uppercase tracking-widest hover:border-[#c9a227] hover:text-[#c9a227]">Management & data consultancy</a>
+            <a href="/management-data/starter-pack" className="rounded-full border border-[#c9a227] px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-[#c9a227] hover:bg-[#c9a227] hover:text-black">Free management pack</a>
+            <a href="/consultancy/enquire" className="rounded-full border border-zinc-700 px-8 py-4 text-center text-sm font-bold uppercase tracking-widest hover:border-[#c9a227] hover:text-[#c9a227]">Management & data consultancy</a>
           </div>
         </div>
       </section>
@@ -84,7 +85,10 @@ export default function ManagementDataPage() {
               <p className="mt-7 text-lg leading-8 text-zinc-400">
                 Digital asset management is not just a file store. It is the structure that links equipment, information, ownership, revision status and lifecycle history so people can find the right thing and trust that it is current.
               </p>
-              <a href="/management-data/support/digital-asset-management-guide" className="mt-8 inline-block rounded-full border border-[#c9a227] px-7 py-4 text-sm font-black uppercase tracking-widest text-[#c9a227] hover:bg-[#c9a227] hover:text-black">Read the DAM guide</a>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a href="/management-data/support/digital-asset-management-guide" className="inline-block rounded-full border border-[#c9a227] px-7 py-4 text-center text-sm font-black uppercase tracking-widest text-[#c9a227] hover:bg-[#c9a227] hover:text-black">Read the DAM guide</a>
+                <a href="/management-data/digital-asset-starter-pack" className="inline-block rounded-full bg-[#c9a227] px-7 py-4 text-center text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Free DAM starter pack</a>
+              </div>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
               {digitalAssets.map(([title, text]) => (
@@ -134,7 +138,7 @@ export default function ManagementDataPage() {
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
             If the problem is bigger than a guide, we can help define the management system, clean up the information flow and build a practical route from current state to controlled operation.
           </p>
-          <a href="/consultancy" className="mt-8 inline-block rounded-full bg-[#c9a227] px-8 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Explore consultancy</a>
+          <a href="/consultancy/enquire" className="mt-8 inline-block rounded-full bg-[#c9a227] px-8 py-4 text-sm font-black uppercase tracking-widest text-black hover:bg-[#e4c45a]">Explore consultancy</a>
         </div>
       </section>
     </main>
