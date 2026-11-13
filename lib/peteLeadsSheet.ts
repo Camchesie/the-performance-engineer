@@ -13,6 +13,7 @@
  * as Editor. Do not expose the key in NEXT_PUBLIC_ variables.
  */
 import { createSign } from "node:crypto";
+import { get, list } from "@vercel/blob";
 
 type Lead = {
   id: string;
@@ -122,4 +123,54 @@ export async function mirrorLeadToGoogleSheet(lead: Lead): Promise<"synced" | "s
   ];
   await sheetsRequest(sheetId, token, spreadsheetRange, "POST", { values: [row] });
   return "synced";
+}
+
+/**
+ * Recover records missed during a Google outage and backfill historic leads.
+ * Reads private blobs server-side. Never sends phone/problem text to Sheets.
+ * Bound the scan to avoid runaway work on a Hobby Vercel function.
+ */
+export async function reconcileLeadsFromBlob() {
+  const sheetId = process.env.PETE_LEADS_SHEET_ID;
+  const email = process.env.PETE_GOOGLE_SERVICE_ACCOUNT_EMAIL;
+  const key = process.env.PETE_GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY?.replace(/\\n/g, "\n");
+  if (!sheetId || !email || !key) throw new Error("Google Sheets integration is not configured");
+  const token = await googleToken(email, key);
+  const known = await sheetsRequest(sheetId, token, "'Leads'!B2:B", "GET");
+  const existing = new Set((known.values ?? []).map(row => row[0]).filter(Boolean));
+  const summary = { scanned: 0, added: 0, existing: 0, invalid: 0, truncated: false };
+  let cursor: string | undefined;
+
+  do {
+    const page = await list({ prefix: "leads/", limit: 100, ...(cursor ? { cursor } : {}) });
+    for (const blob of page.blobs) {
+      summary.scanned++;
+      const match = blob.pathname.match(/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\.json$/i);
+      if (!match) { summary.invalid++; continue; }
+      const id = match[1];
+      if (existing.has(id)) { summary.existing++; continue; }
+      const stored = await get(blob.pathname, { access: "private" });
+      if (!stored || stored.statusCode !== 200) throw new Error("Private lead record unavailable: " + id);
+      const raw = JSON.parse(await new Response(stored.stream).text()) as Record<string, unknown>;
+      if (
+        raw.id !== id ||
+        !["engineering_pack", "management_pack", "dam_pack", "consultancy"].includes(String(raw.lead_type)) ||
+        typeof raw.name !== "string" || typeof raw.email !== "string" ||
+        typeof raw.company !== "string" || typeof raw.created_at !== "string"
+      ) { summary.invalid++; continue; }
+      const row = [
+        String(raw.created_at), id, String(raw.lead_type), raw.name, raw.company,
+        raw.email, typeof raw.source === "string" ? raw.source : "",
+        "New", "", "", "", new Date().toISOString(),
+      ];
+      await sheetsRequest(sheetId, token, "'Leads'!A:L", "POST", { values: [row] });
+      existing.add(id);
+      summary.added++;
+    }
+    if (!page.hasMore) return summary;
+    if (!page.cursor || page.cursor === cursor) throw new Error("Blob pagination stalled");
+    cursor = page.cursor;
+  } while (summary.scanned < 1500);
+  summary.truncated = true;
+  return summary;
 }
