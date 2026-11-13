@@ -1,5 +1,6 @@
 import { put } from "@vercel/blob";
 import { randomUUID } from "node:crypto";
+import { mirrorLeadToGoogleSheet } from "@/lib/peteLeadsSheet";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -94,6 +95,19 @@ export async function POST(request: Request) {
       cacheControlMaxAge: 60,
     },
   );
+
+  // Blob storage above succeeded: Google Sheets is a best-effort mirror only.
+  // A Sheets outage must not lose a lead or prevent the form confirmation.
+  try {
+    await mirrorLeadToGoogleSheet({
+      id, lead_type: leadType, name, company, email,
+      source: source || null, created_at: now.toISOString(),
+    });
+  } catch (error) {
+    console.error("PETE_LEAD_SHEET_SYNC_FAILED", JSON.stringify({
+      id, message: error instanceof Error ? error.message : "unknown error",
+    }));
+  }
 
   console.info(
     "PETE_LEAD_CREATED",
