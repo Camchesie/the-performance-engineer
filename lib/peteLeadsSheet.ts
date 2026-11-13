@@ -145,7 +145,7 @@ export async function reconcileLeadsFromBlob() {
     const page = await list({ prefix: "leads/", limit: 100, ...(cursor ? { cursor } : {}) });
     for (const blob of page.blobs) {
       summary.scanned++;
-      const match = blob.pathname.match(/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\.json$/i);
+      const match = blob.pathname.match(/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\.json$/i);
       if (!match) { summary.invalid++; continue; }
       const id = match[1];
       if (existing.has(id)) { summary.existing++; continue; }
